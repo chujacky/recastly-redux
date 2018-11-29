@@ -7,16 +7,14 @@ var handleVideoSearch = (q) => {
 
   var obj = {
      key: YOUTUBE_API_KEY,
-     query: q,
+     q: q,
      max: 5
    }
   return (dispatch) => {
-    setTimeout(() => {
       searchYouTube(obj, (videos) => {
         dispatch(changeVideoList(videos));
         dispatch(changeVideo(videos[0]));
       }) 
-    })
   }
 
   //TODO:  Write an asynchronous action to handle a video search!

@@ -5,9 +5,7 @@ import { mockStore, mockThunk } from './reduxMocks.jsx';
 describe('store', function() {
   it('should be an instance of a redux store', function() {
     var expected = Object.keys(mockStore);
-    console.log(expected);
     var actual = Object.keys(store);
-    console.log(actual)
     expect(actual).to.deep.equal(expected);
   });
   it('should have a state with a .currentVideo field', function() {
