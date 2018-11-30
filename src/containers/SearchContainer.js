@@ -5,7 +5,6 @@ import handleVideoSearch from '../actions/search.js';
 
 
 const mapDispatchToProps = dispatch => {
-  console.log(dispatch);
   return {
     handleSearchInputChange: q => {dispatch(handleVideoSearch(q))}
   }

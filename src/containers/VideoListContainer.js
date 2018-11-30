@@ -3,9 +3,9 @@ import VideoList from './../components/VideoList.js';
 import changeVideo from './../actions/currentVideo.js';
 
 
-const mapStateToPros = (state) => {
+const mapStateToProps = (state) => {
 
-  console.log(state);
+  
   return ({
     videos: state.videoList
   });
@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-const VideoListContainer = connect(mapStateToPros, mapDispatchToProps)(VideoList);
+const VideoListContainer = connect(mapStateToProps, mapDispatchToProps)(VideoList);
 
 //TODO: define a VideoListContainer component which will hook up your action
 // dispatchers with your VideoList component props.
